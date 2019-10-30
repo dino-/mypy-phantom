@@ -2,7 +2,7 @@
 
 # Illustration of using phantom types with Python and mypy
 #
-# Type check this script: `mypy phantom`
+# Type check this script: `mypy mypy-phantom`
 
 
 from typing import TypeVar, Generic
