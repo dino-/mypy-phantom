@@ -30,7 +30,7 @@ showing the same thing done in Haskell and Scala.
 
 Simply type check with mypy:
 
-    $ mypy mypy-phantom
+    $ mypy mypy-phantom.py
 
 
 ## Contact

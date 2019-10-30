@@ -3,7 +3,7 @@
 # Illustration of using phantom types with Python and mypy
 # Inspired by https://james-iry.blogspot.com/2010/10/phantom-types-in-haskell-and-scala.html
 #
-# Type check this script: `mypy mypy-phantom`
+# Type check this script: `mypy mypy-phantom.py`
 
 
 from typing import TypeVar, Generic
