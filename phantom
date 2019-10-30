@@ -1,0 +1,49 @@
+#! /usr/bin/env python3
+
+from typing import TypeVar, Generic
+
+
+Fuel = TypeVar('Fuel')
+O2 = TypeVar('O2')
+
+class NoFuel: pass
+class Fueled: pass
+
+class NoO2: pass
+class HasO2: pass
+
+class Rocket(Generic[Fuel, O2]): pass
+
+
+def createRocket() -> Rocket[NoFuel, NoO2]:
+  return Rocket()
+
+
+def addFuel(rocket: Rocket[NoFuel, O2]) -> Rocket[Fueled, O2]:
+  return Rocket()
+
+
+def addO2(rocket: Rocket[Fuel, NoO2]) -> Rocket[Fuel, HasO2]:
+  return Rocket()
+
+
+def launch(rocket: Rocket[Fueled, HasO2]) -> None:
+  print("blastoff")
+
+
+def main() -> None:
+  # These work, and fueling/adding o2 in any order
+  launch(addO2(addFuel(createRocket())))
+  launch(addFuel(addO2(createRocket())))
+
+  # No fuel, won't typecheck
+  launch(addO2(createRocket()))
+
+  # No O2, won't typecheck
+  launch(addFuel(createRocket()))
+
+  # No fuel or O2, won't typecheck
+  launch(createRocket())
+
+
+if __name__ == '__main__': main()
