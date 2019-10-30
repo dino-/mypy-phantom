@@ -1,5 +1,10 @@
 #! /usr/bin/env python3
 
+# Illustration of using phantom types with Python and mypy
+#
+# Type check this script: `mypy phantom`
+
+
 from typing import TypeVar, Generic
 
 
