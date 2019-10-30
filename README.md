@@ -9,7 +9,7 @@ Example of using phantom types in Python with mypy
 ## Description
 
 Phantom types can be used to encode state in the type system and enforce
-correct usage of APIs at the type checker level.
+correct usage of APIs at the type level.
 
 This is a contrived phantom types example using the concept of a rocket ship
 that must be fueled and contain O2 to launch. These states are encoded as
