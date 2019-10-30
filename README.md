@@ -12,8 +12,10 @@ Phantom types can be used to encode state in the type system and enforce
 correct usage of APIs at the type checker level.
 
 This is a contrived phantom types example using the concept of a rocket ship
-that must be fueled and contain O2 to launch. These constraints are encoded as
-types. Values with the incorrect types won't pass the type checker (mypy).
+that must be fueled and contain O2 to launch. These states are encoded as
+types. By controlling the type transformations as input and output types of
+functions we can enforce correct usage of an API. Code that will do something
+wrong won't type check.
 
 This code was inspired by [this example](https://james-iry.blogspot.com/2010/10/phantom-types-in-haskell-and-scala.html)
 showing the same thing done in Haskell and Scala.
